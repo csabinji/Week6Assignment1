@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
+import android.widget.Toast
+import com.sabin.softuser.MainActivity
 import com.sabin.softuser.R
 import com.sabin.softuser.model.User
 import com.sabin.softuser.model.userList
@@ -67,6 +69,8 @@ class AddFragment : Fragment(),View.OnClickListener {
         when(v?.id){
             R.id.Save ->{
                 userList.addUser(User(name.text.toString(), age.text.toString().toInt(),gender,address.text.toString(),image.text.toString()))
+
+                Toast.makeText(getActivity(), "User Added Successfully !!", Toast.LENGTH_SHORT ).show()
             }
     }
 
